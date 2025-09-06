@@ -3,6 +3,7 @@ package com.example.cardly.ui.theme
 import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
@@ -12,9 +13,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+    primary = Purple8,
+    secondary = PurpleGrey8,
+    tertiary = Pink8
 )
 
 private val LightColorScheme = lightColorScheme(
@@ -55,4 +56,11 @@ fun CardlyTheme(
         typography = Typography,
         content = content
     )
+}
+
+fun MaterialTheme(
+    colorScheme: androidx.compose.material3.ColorScheme,
+    typography: kotlin.text.Typography,
+    content: @androidx.compose.runtime.Composable (() -> kotlin.Unit)
+) {
 }
