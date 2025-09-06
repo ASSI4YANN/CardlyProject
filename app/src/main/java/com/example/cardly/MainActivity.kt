@@ -26,6 +26,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -59,21 +60,21 @@ fun CardLy() {
                 .padding(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            val icon1 = painterResource(R.drawable.busicard1)
+            val icon1 = painterResource(R.drawable.busicard2)
 
             Image(
                 painter = icon1,
-                contentDescription = "ProfilePic",
+                contentDescription = stringResource(R.string.c1),
                 modifier = Modifier.size(185.dp)
             )
             Spacer(modifier = Modifier.height(15.dp))
             Text(
-                text = "N'GUESSAN ASSI",
+                text = stringResource(R.string.name),
                 fontSize = 22.sp, fontWeight = FontWeight.W500,
                 color = Color.DarkGray
             )
             Text(
-                text = " Etudiant ",
+                text = stringResource(R.string.titre),
                 fontSize = 16.sp, fontWeight = FontWeight.W700,
                 color = Color.Gray, // Gris
             )
@@ -92,13 +93,13 @@ fun CardLy() {
             ) {
                 Icon(
                     imageVector = Icons.Default.Call,
-                    contentDescription = "tel",
+                    contentDescription = stringResource(R.string.i1),
                     modifier = Modifier.size(24.dp),
                     tint = Color.Black
                 )
                 Spacer(modifier = Modifier.width(12.dp))
                 Text(
-                    text = "(+225) 05 44 63 85 31",
+                    text = stringResource(R.string.number),
                     fontSize = 20.sp,
                     fontWeight = FontWeight.W500
                 )
@@ -111,7 +112,7 @@ fun CardLy() {
                 val img2 = painterResource(R.drawable.igpng)
                 Image(
                     painter = img2,
-                    contentDescription = "Linkedin",
+                    contentDescription = stringResource(R.string.socialNetwork),
                     modifier = Modifier.size(24.dp)
                 )
                 Spacer(modifier = Modifier.width(12.dp))
@@ -128,12 +129,12 @@ fun CardLy() {
                 val mail = painterResource(R.drawable.mail)
                 Image(
                     painter = mail,
-                    contentDescription = "Mail",
+                    contentDescription = stringResource(R.string.mail),
                     modifier = Modifier.size(24.dp)
                 )
                 Spacer(modifier = Modifier.width(12.dp))
                 Text(
-                    text = "nguessan@gmail.com",
+                    text = stringResource(R.string.address),
                     fontSize = 20.sp,
                     fontWeight = FontWeight.W500
                 )

@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Cardly</string>
+    <string name="c1">PhotoProfil</string>
+    <string name="name">N\'GUESSAN ASSI</string>
+    <string name="titre">Etudiant</string>
+    <string name="i1">Telephone</string>
+    <string name="number">(+225) 05 44 63 85 31</string>
+    <string name="socialNetwork">Instagram</string>
+    <string name="mail">Mail</string>
+    <string name="address">nguessan@gmail.com</string>
 </resources>
