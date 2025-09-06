@@ -38,122 +38,111 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             CardlyTheme {
-                    CardLy()
-                }
+                CardLy()
             }
         }
     }
-
+}
 
 @Composable
 fun CardLy() {
-Column(
-    modifier = Modifier
-        .fillMaxSize()
-        .padding(16.dp),
-    horizontalAlignment = Alignment.CenterHorizontally,
-    verticalArrangement = Arrangement.Center
-
-) {
     Column(
         modifier = Modifier
-            .fillMaxWidth()
+            .fillMaxSize()
             .padding(16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
     ) {
-        val icon1 = painterResource(R.drawable.busicard1)
-
-        Image(
-            painter = icon1,
-            contentDescription = "ProfilePic",
-            modifier = Modifier.size(185.dp)
-        )
-
-        Spacer(modifier = Modifier.height(15.dp))
-
-        Text(
-            text = "N'GUESSAN ASSI",
-            fontSize = 22.sp, fontWeight = FontWeight.W500,
-            color = Color.DarkGray
-        )
-
-        Text(
-            text = "Carte de visite ",
-            fontSize = 16.sp, fontWeight = FontWeight.W700,
-            color = Color.Gray, // Gris
-        )
-    }
-
-    Spacer(modifier = Modifier.height(50.dp))
-
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(16.dp),
-
-        horizontalAlignment = Alignment.CenterHorizontally
-
-    ) {
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            modifier = Modifier.padding(4.dp)
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Icon(
-                imageVector = Icons.Default.Call,
-                contentDescription = "tel",
-                modifier = Modifier.size(24.dp),
-                tint = Color.Black
-            )
-            Spacer(modifier = Modifier.width(12.dp))
-            Text(
-                text = "(+225) 05 44 63 85 31",
-                fontSize = 20.sp,
-                fontWeight = FontWeight.W500
-            )
+            val icon1 = painterResource(R.drawable.busicard1)
 
-        }
-
-        Spacer(modifier = Modifier.height(15.dp))
-
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            modifier = Modifier.padding(4.dp)
-        ) {
-            val img2 = painterResource(R.drawable.igpng)
             Image(
-                painter = img2,
-                contentDescription = "Linkedin",
-                modifier = Modifier.size(24.dp)
+                painter = icon1,
+                contentDescription = "ProfilePic",
+                modifier = Modifier.size(185.dp)
             )
-            Spacer(modifier = Modifier.width(12.dp))
-            Text(text = "ASSINGS@gmail.com", fontSize = 20.sp, fontWeight = FontWeight.W500)
-        }
-
-        Spacer(modifier = Modifier.height(15.dp))
-
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            modifier = Modifier.padding(4.dp)
-        ) {
-            val mail = painterResource(R.drawable.mail)
-            Image(
-                painter = mail,
-                contentDescription = "Mail",
-                modifier = Modifier.size(24.dp)
-            )
-            Spacer(modifier = Modifier.width(12.dp))
+            Spacer(modifier = Modifier.height(15.dp))
             Text(
-                text = "nguessan@gmail.com",
-                fontSize = 20.sp,
-                fontWeight = FontWeight.W500
+                text = "N'GUESSAN ASSI",
+                fontSize = 22.sp, fontWeight = FontWeight.W500,
+                color = Color.DarkGray
             )
+            Text(
+                text = " Etudiant ",
+                fontSize = 16.sp, fontWeight = FontWeight.W700,
+                color = Color.Gray, // Gris
+            )
+        }
+        Spacer(modifier = Modifier.height(50.dp))
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp),
+
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier.padding(4.dp)
+            ) {
+                Icon(
+                    imageVector = Icons.Default.Call,
+                    contentDescription = "tel",
+                    modifier = Modifier.size(24.dp),
+                    tint = Color.Black
+                )
+                Spacer(modifier = Modifier.width(12.dp))
+                Text(
+                    text = "(+225) 05 44 63 85 31",
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.W500
+                )
+            }
+            Spacer(modifier = Modifier.height(15.dp))
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier.padding(4.dp)
+            ) {
+                val img2 = painterResource(R.drawable.igpng)
+                Image(
+                    painter = img2,
+                    contentDescription = "Linkedin",
+                    modifier = Modifier.size(24.dp)
+                )
+                Spacer(modifier = Modifier.width(12.dp))
+                Text(
+                    text = "ASSINGS@gmail.com",
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.W500)
+            }
+            Spacer(modifier = Modifier.height(15.dp))
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier.padding(4.dp)
+            ) {
+                val mail = painterResource(R.drawable.mail)
+                Image(
+                    painter = mail,
+                    contentDescription = "Mail",
+                    modifier = Modifier.size(24.dp)
+                )
+                Spacer(modifier = Modifier.width(12.dp))
+                Text(
+                    text = "nguessan@gmail.com",
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.W500
+                )
+            }
         }
     }
 }
-}
 
-
-@Preview(showBackground = true, showSystemUi = true)
+@Preview(showBackground = true)
 @Composable
 fun CardLyPreview() {
     CardlyTheme {
